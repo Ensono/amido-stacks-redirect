@@ -20,15 +20,9 @@ jobs:
             - name: Checkout Repo
               uses: actions/checkout@v2
 
-            # Configure node so that the build can run
-            - name: Use NodeJS
-              uses: actions/setup-node@v3
-              with:
-                    node-version: '16.x'
-
             # Deploy to GHitHub Pages
             - name: Deploy to GitHub Pages
-              uses: JamesIves/github-pages-deploy-action@4
+              uses: JamesIves/github-pages-deploy-action@v4
               with:
                 branch: gh-pages
                 folder: src
