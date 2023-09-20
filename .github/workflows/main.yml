@@ -1,21 +1,21 @@
 name: amido.stacks.redirect
-​
+
 on:
     pull_request:
         branches:
             - main
-​
+
 jobs:
     build-and-deploy:
         name: Deploy Redirect
         runs-on: ubuntu-latest
-​
+
         steps:
-​
+
             # Checkout the documentation repository
             - name: Checkout Repo
               uses: actions/checkout@v2
-​
+
             # Configure node so that the build can run
             - name: Use NodeJS
               uses: actions/setup-node@v3
